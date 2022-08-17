@@ -15,6 +15,8 @@ public class Empleados {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	@Column(name = "dni")
 	private String dni;
 	@Column(name = "nombre")
 	private String nombre;
@@ -32,7 +34,8 @@ public class Empleados {
 	 * @param apellidos
 	 * @param departamento
 	 */
-	public Empleados(String dni, String nombre, String apellidos, Departamentos departamento) {
+	public Empleados(int id,String dni, String nombre, String apellidos, Departamentos departamento) {
+		this.id = id;
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -47,6 +50,22 @@ public class Empleados {
 	}
 
 	//Getters y Setters
+	
+	/**
+	 * 
+	 * @return id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * 
+	 * @param id
+	 */
+	public void setId(String dni) {
+		this.id = id;
+	}
 	
 	/**
 	 * 
@@ -117,7 +136,7 @@ public class Empleados {
 	 */
 	@Override
 	public String toString() {
-		return "Empleados [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
+		return "Empleados [id=" + id + ", dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
 	}
 	
 	
