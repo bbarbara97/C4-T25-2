@@ -53,9 +53,9 @@ public class Empleados {
 	
 	/**
 	 * 
-	 * @return id
+	 * @return
 	 */
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -63,7 +63,7 @@ public class Empleados {
 	 * 
 	 * @param id
 	 */
-	public void setId(String dni) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
